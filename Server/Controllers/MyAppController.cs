@@ -42,7 +42,6 @@ namespace Asp2017.Server.Controllers
     [HttpGet("GetStockLogoAPI")]
     public IActionResult GetStockLogoAPI(string symbol)
     {
-      //symbol = "A";
       var response = GetApiResponse<Logo>($"https://api.iextrading.com/1.0/stock/{symbol}/logo");
       return Json(response);
     }

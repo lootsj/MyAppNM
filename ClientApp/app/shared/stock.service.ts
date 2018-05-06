@@ -40,15 +40,8 @@ export class StockService {
 
   GetStockLogoAPI(symbol: string) {
 
-
-    const headers = new Headers();
-    headers.append("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
-    headers.append("Access-Control-Allow-Origin", "*");
     return this.httpClient.get('/api/myapp/GetStockLogoAPI?symbol=' + symbol)
-      //,{ withCredentials: true, headers })
       .map(res => res.json());
-
-
   }
 
 
@@ -58,8 +51,8 @@ export class StockService {
     headers.append("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
     headers.append("Access-Control-Allow-Origin", "*");
 
-    return this.httpClient.get('/api/myapp/GetStockPriceAPI?symbol=' + symbol)
-    //  { withCredentials: true, headers })
+    return this.httpClient.get('/api/myapp/GetStockPriceAPI?symbol=' + symbol,
+     { withCredentials: true, headers })
       .map(res => res.json());
   }
 
@@ -71,7 +64,7 @@ export class StockService {
     headers.append("Access-Control-Allow-Origin", "*");
 
     return this.httpClient.get('/api/myapp/GetStockCompanyAPI?symbol=' + symbol)
-      //{ withCredentials: true, headers })
+     // { withCredentials: true, headers })
       .map(res => res.json());
   }
 

@@ -96,25 +96,10 @@ export class MyAppComponent implements OnInit {
     //  result => this.selectPrice = result); //get selected price for details
 
     //this.stockService.GetStockCompanyInfoAPI(stocksymbol.symbol).subscribe(
-     // result => this.selectCompanyInfo = result); //get selected company info for details the api i was hitting seemed to go down at some point during development
+    //  result => this.selectCompanyInfo = result); //get selected company info for details the api i was hitting seemed to go down at some point during development
     this.displayDialog = true;
     event.preventDefault();
   }
-
-  //selectLogo(symbol: string) {
-
-  // return this.stockService.GetStockLogoAPI(symbol).subscribe(
-  //    result => this.selectedLogo = result);
-
-  //}
-
-  //getCompanyInfo(symbol: string) {
-      
-  //  return this.stockService.GetStockCompanyInfoAPI(symbol).subscribe(
-  //    result => this.selectedLogo = result);
-
-  //}
-
 
   ngOnInit() {
    
